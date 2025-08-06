@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menù - Sapori di Mare</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #0c4a6e 0%, #075985 50%, #0369a1 100%);
+            color: white;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .logo {
+            font-size: 3em;
+            font-weight: bold;
+            color: #fbbf24;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .wave {
+            font-size: 2em;
+            margin: 0 10px;
+            animation: wave 2s ease-in-out infinite;
+        }
+
+        @keyframes wave {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .tagline {
+            font-size: 1.2em;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.05);
+            margin: 20px 0;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #fbbf24;
+            backdrop-filter: blur(5px);
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #fbbf24;
+            margin-bottom: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #fbbf24;
+            padding-bottom: 10px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 15px 0;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-info {
+            flex: 1;
+            margin-right: 15px;
+        }
+
+        .item-name {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #fef3c7;
+            margin-bottom: 5px;
+        }
+
+        .item-description {
+            font-size: 0.9em;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+
+        .item-price {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #fbbf24;
+            min-width: 60px;
+            text-align: right;
+        }
+
+        .allergens {
+            font-size: 0.8em;
+            color: #fecaca;
+            margin-top: 3px;
+        }
+
+        .signature {
+            background: linear-gradient(45deg, #fbbf24, #f59e0b);
+            color: #1e293b;
+            border-radius: 10px;
+            padding: 3px 8px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .note {
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid #fbbf24;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.9em;
+            color: #fef3c7;
+        }
+
+        .wine-category {
+            background: rgba(139, 69, 19, 0.3);
+            border-left-color: #dc2626;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 10px; }
+            .logo { 
+                font-size: 1.5em; 
+                letter-spacing: 1px;
+                line-height: 1.2;
+            }
+            .wave { 
+                font-size: 1.3em; 
+                margin: 0 5px;
+            }
+            .section { padding: 15px; }
+            .menu-item { flex-direction: column; align-items: flex-start; }
+            .item-price { text-align: left; margin-top: 5px; }
+        }
+
+        @media (max-width: 400px) {
+            .logo { 
+                font-size: 1.3em; 
+                letter-spacing: 0.5px;
+            }
+            .wave { 
+                font-size: 1.1em; 
+                margin: 0 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                🌊 SAPORI DI MARE <span class="wave">🐟</span>
+            </div>
+            <div class="tagline">Autentica Esperienza di Mare</div>
+        </div>
+
+        <!-- ANTIPASTI FREDDI -->
+        <div class="section">
+            <div class="section-title">🦐 Antipasti Freddi</div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Antipasti Freddi Piatto Unico</div>
+                    <div class="item-description">5 portate: Scampi al limone caramellato, Scampi alla catalana, Tartare esotica con basmati, Mazzancolle bollite, Cocktail di gamberi in salsa rosa su canapé</div>
+                    <div class="allergens">Allergeni: 1.2.3.4.7.9</div>
+                </div>
+                <div class="item-price">12€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Insalata di Mare</div>
+                    <div class="item-description">Calamari, gamberi, rucola, sedano e prezzemolo</div>
+                    <div class="allergens">Allergeni: 2.9.14</div>
+                </div>
+                <div class="item-price">10€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Crudo di Mare Piatto Unico</div>
+                    <div class="item-description">6 portate</div>
+                    <div class="allergens">Allergeni: 2.4.14</div>
+                </div>
+                <div class="item-price">24€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Grand Plateau di Crudi</div>
+                    <div class="allergens">Allergeni: 2.4.14</div>
+                </div>
+                <div class="item-price">73€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Ostriche (soggette a disponibilità)</div>
+                    <div class="item-description">Al pezzo</div>
+                    <div class="allergens">Allergeni: 14</div>
+                </div>
+                <div class="item-price">3.50€</div>
+            </div>
+        </div>
+
+        <!-- ANTIPASTI CALDI -->
+        <div class="section">
+            <div class="section-title">🔥 Antipasti Caldi</div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Antipasti Caldi</div>
+                    <div class="item-description">4 portate: Scampi al rosmarino, Calamaretti grigliati, Pescatrice in padella, Sauté di vongole *Il pesce può variare</div>
+                    <div class="allergens">Allergeni: 2.4.14</div>
+                </div>
+                <div class="item-price">18€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Top Antipasti Caldi</div>
+                    <div class="item-description">Scampi al rosmarino, Calamaretti grigliati, Pescatrice in padella, Sauté di vongole, Sogliola bollita al limone, Panzerotto farcito fatto in casa, Scampi piccanti *Il pesce può variare</div>
+                    <div class="allergens">Allergeni: 1.2.4.8.9.14</div>
+                </div>
+                <div class="item-price">28€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Impepata di Cozze</div>
+                    <div class="allergens">Allergeni: 14</div>
+                </div>
+                <div class="item-price">13€</div>
+            </div>
+        </div>
+
+        <!-- PRIMI PIATTI -->
+        <div class="section">
+            <div class="section-title">🍝 Primi Piatti</div>
+            <div class="note">Non si effettuano modifiche ai primi piatti</div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Chitarra alle Vongole</div>
+                    <div class="allergens">Allergeni: 1.2.3.4.9.14</div>
+                </div>
+                <div class="item-price">10€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Gnocchi Scoglio</div>
+                    <div class="item-description">Calamaretti, prezzemolo, crema di scampi fatta in casa, gamberi, cozze, vongole e pomodoro</div>
+                    <div class="allergens">Allergeni: 1.2.4.9.14</div>
+                </div>
+                <div class="item-price">15€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Primo Nostro <span class="signature">SIGNATURE</span></div>
+                    <div class="item-description">Chitarrina con scampi sgusciati e sogliola, saltati al rosmarino, limone e crema di scampi</div>
+                    <div class="allergens">Allergeni: 1.2.3.4</div>
+                </div>
+                <div class="item-price">16€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Spaghetti alle Vongole Senza Glutine</div>
+                    <div class="item-description">Pasta senza glutine e farina senza glutine per fritture disponibile con preavviso alla prenotazione per mantenere la postazione incontaminata</div>
+                    <div class="allergens">Allergeni: 14</div>
+                </div>
+                <div class="item-price">14€</div>
+            </div>
+        </div>
+
+        <!-- SECONDI PIATTI -->
+        <div class="section">
+            <div class="section-title">🐟 Secondi Piatti</div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Fritto Misto Senza Lisca</div>
+                    <div class="item-description">Calamari e gamberi</div>
+                    <div class="allergens">Allergeni: 1.2.14</div>
+                </div>
+                <div class="item-price">14€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Fritto Misto di Mare</div>
+                    <div class="item-description">Calamari, gamberi e piccoli pesci con lische (Con farina senza glutine +3€)</div>
+                    <div class="allergens">Allergeni: 1.2.4.14</div>
+                </div>
+                <div class="item-price">15€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Grigliata Mista di Pesce</div>
+                    <div class="item-description">Pescatrice, sogliola, scampi, gamberi e spiedini di calamari</div>
+                    <div class="allergens">Allergeni: 1.2.4.14</div>
+                </div>
+                <div class="item-price">25€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Pesce al Forno con Patate</div>
+                    <div class="item-description">Sfilettato da noi prima del servizio. Soggetto a disponibilità</div>
+                </div>
+                <div class="item-price"></div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Branzino</div>
+                    <div class="item-description">Al forno con patate</div>
+                </div>
+                <div class="item-price">22€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Orata</div>
+                    <div class="item-description">Al forno con patate</div>
+                </div>
+                <div class="item-price">23€</div>
+            </div>
+        </div>
+
+        <!-- CONTORNI -->
+        <div class="section">
+            <div class="section-title">🥗 Contorni</div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Patatine Fritte "Chips"</div>
+                </div>
+                <div class="item-price">4€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Insalata Mista</div>
+                </div>
+                <div class="item-price">4€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Verdure Grigliate</div>
+                    <div class="item-description">Zucchine e melanzane</div>
+                </div>
+                <div class="item-price">5€</div>
+            </div>
+        </div>
+
+        <!-- MENU ALTERNATIVO -->
+        <div class="section">
+            <div class="section-title">👨‍👩‍👧‍👦 Menù Alternativo</div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Pasta al Pomodoro</div>
+                    <div class="allergens">Allergeni: 1.3</div>
+                </div>
+                <div class="item-price">6€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Cotoletta di Pollo e Patatine</div>
+                    <div class="allergens">Allergeni: 1.2</div>
+                </div>
+                <div class="item-price">10€</div>
+            </div>
+        </div>
+
+        <!-- BEVANDE -->
+        <div class="section">
+            <div class="section-title">🥤 Bevande</div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Acqua 0.75L</div>
+                </div>
+                <div class="item-price">2€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Coca Cola Bottiglia di Vetro 1L</div>
+                </div>
+                <div class="item-price">6€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Bevande in Lattina 0.33L</div>
+                </div>
+                <div class="item-price">3€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Peroni 0.33cl</div>
+                </div>
+                <div class="item-price">3€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Bianca Piperita 0.33cl</div>
+                    <div class="item-description">Birra artigianale bianca "KM0" prodotta da "OPPERBACCO" Notaresco(TE)</div>
+                </div>
+                <div class="item-price">6€</div>
+            </div>
+        </div>
+
+        <!-- VINI BIANCHI E ROSÉ -->
+        <div class="section wine-category">
+            <div class="section-title">🍷 Vini Bianchi e Rosé</div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Vino della Casa Montelvini</div>
+                    <div class="item-description">Bianco o Rosé</div>
+                </div>
+                <div class="item-price">
+                    0.75L: 11€<br>
+                    0.50L: 8€<br>
+                    0.25L: 5€
+                </div>
+            </div>
+            
+            <div style="margin: 20px 0; font-weight: bold; color: #10b981; text-align: center;">VINI BIOLOGICI</div>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Cantina Agriverde - Pecorino Natum</div>
+                    <div class="item-description">Leggero e paglierino</div>
+                </div>
+                <div class="item-price">19€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Azienda Torre dei Beati - Pecorino Superiore</div>
+                    <div class="item-description">Corposo e leggermente profumato</div>
+                </div>
+                <div class="item-price">26€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Kellerei St.Pauls - Gewürztraminer</div>
+                    <div class="item-description">Corposo e fruttato</div>
+                </div>
+                <div class="item-price">29€</div>
+            </div>
+        </div>
+
+        <!-- SELEZIONE VINI -->
+        <div class="section wine-category">
+            <div class="section-title">🍾 Selezione Vini</div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Ciù Ciù - Passerina Spumante</div>
+                </div>
+                <div class="item-price">22€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Cantina Pasetti - Rosato Testarossa</div>
+                    <div class="item-description">Il più amato dai teramani</div>
+                </div>
+                <div class="item-price">23€</div>
+            </div>
+            <div class="item-info">
+                    <div class="item-name">Cantina Pasetti - Passerina Testarossa</div>
+                    <div class="item-description">Paglierino e una leggerissima nota frizzantina nel finale</div>
+                </div>
+                <div class="item-price">23€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Camillo Montori - Trebbiano d'Abruzzo Fonte Cupa</div>
+                    <div class="item-description">Corposo e pieno, un vero Trebbiano, ex vincitore Vinitaly 2018</div>
+                </div>
+                <div class="item-price">23€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Camillo Montori - Cerasuolo d'Abruzzo Fonte Cupa</div>
+                    <div class="item-description">Secco, Deciso e Beverino</div>
+                </div>
+                <div class="item-price">24€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Tenuta Ulisse - Cococciola "Glass Cork"</div>
+                    <div class="item-description">Secco e fresco, una garanzia</div>
+                </div>
+                <div class="item-price">24€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Masciarelli Tenute Agricole - Villa Gemma Bianco</div>
+                    <div class="item-description">Vino d'altri tempi "Old Style"</div>
+                </div>
+                <div class="item-price">28€</div>
+            </div>
+        </div>
+
+        <!-- SPUMANTI -->
+        <div class="section wine-category">
+            <div class="section-title">🥂 Spumanti</div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Prosecco Dry</div>
+                </div>
+                <div class="item-price">20€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Franciacorta Ferghettina</div>
+                    <div class="item-description">Bianco e Rosé</div>
+                </div>
+                <div class="item-price">65€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Franciacorta Cuvée Prestige Ca' del Bosco</div>
+                </div>
+                <div class="item-price">65€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Franciacorta Bellavista Alma Gran Cuvé</div>
+                </div>
+                <div class="item-price">65€</div>
+            </div>
+        </div>
+
+        <!-- BAR MENU -->
+        <div class="section">
+            <div class="section-title">☕ Bar</div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Caffè</div>
+                </div>
+                <div class="item-price">1.3€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Digestivo</div>
+                </div>
+                <div class="item-price">3€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Sorbetto al Limone</div>
+                </div>
+                <div class="item-price">3€</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Dolce</div>
+                    <div class="allergens">Allergeni: 1.2.7</div>
+                </div>
+                <div class="item-price">5€</div>
+            </div>
+        </div>
+
+        <!-- NOTA IMPORTANTE -->
+        <div class="note">
+            <strong>🐟 Informazioni Pesce Fresco:</strong><br>
+            In conformità al Decreto 17 Luglio 2013, il pesce acquistato fresco, destinato ad essere consumato crudo o parzialmente crudo, è stato sottoposto precedentemente "DA NOI" a trattamento di abbattimento rapido (-40°C) per maggiore sicurezza alimentare. TUTTO IL NOSTRO PESCE È ACQUISTATO FRESCO, LAVORATO E ABBATTUTO "DA NOI". BUON APPETITO!
+        </div>
+
+        <div style="text-align: center; margin: 20px 0;">
+            <div style="font-size: 0.9em; opacity: 0.7;">Pane e Coperto: 3€</div>
+        </div>
+    </div>
+
+    <script>
+        // Animazione onde
+        document.querySelectorAll('.wave').forEach((wave, index) => {
+            wave.style.animationDelay = `${index * 0.5}s`;
+        });
+    </script>
+</body>
+</html>
