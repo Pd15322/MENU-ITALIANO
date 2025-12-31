@@ -151,6 +151,54 @@
             border-left-color: #dc2626;
         }
 
+        /* Tabella Allergeni */
+        .allergens-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.75em;
+            margin-top: 15px;
+        }
+
+        .allergens-table th {
+            background: rgba(251, 191, 36, 0.3);
+            color: #fbbf24;
+            padding: 10px 5px;
+            text-align: left;
+            font-weight: bold;
+            border-bottom: 2px solid #fbbf24;
+        }
+
+        .allergens-table td {
+            padding: 8px 5px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            vertical-align: top;
+        }
+
+        .allergens-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .allergen-number {
+            color: #fbbf24;
+            font-weight: bold;
+        }
+
+        .allergens-footer {
+            text-align: center;
+            font-size: 0.7em;
+            opacity: 0.7;
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .allergens-header-row {
+            font-size: 0.85em;
+            opacity: 0.8;
+            padding: 5px;
+            text-align: center;
+        }
+
         @media (max-width: 600px) {
             .container { padding: 10px; }
             .logo { 
@@ -165,6 +213,14 @@
             .section { padding: 15px; }
             .menu-item { flex-direction: column; align-items: flex-start; }
             .item-price { text-align: left; margin-top: 5px; }
+            
+            .allergens-table {
+                font-size: 0.6em;
+            }
+            .allergens-table th,
+            .allergens-table td {
+                padding: 5px 3px;
+            }
         }
 
         @media (max-width: 400px) {
@@ -175,6 +231,9 @@
             .wave { 
                 font-size: 1.1em; 
                 margin: 0 3px;
+            }
+            .allergens-table {
+                font-size: 0.55em;
             }
         }
     </style>
@@ -194,7 +253,7 @@
             <div class="menu-item">
                 <div class="item-info">
                     <div class="item-name">Antipasti Freddi Piatto Unico</div>
-                    <div class="item-description">5 portate: Scampi al limone caramellato, Scampi alla catalana, Tartare esotica con basmati, Mazzancolle bollite, Cocktail di gamberi in salsa rosa su canapé</div>
+                    <div class="item-description">5 Pietanze: Scampi al limone caramellato, Scampi alla catalana, Tartare esotica con basmati, Mazzancolle bollite, Cocktail di gamberi in salsa rosa su canapé</div>
                     <div class="allergens">Allergeni: 1.2.3.4.7.9</div>
                 </div>
                 <div class="item-price">12€</div>
@@ -577,6 +636,114 @@
                 </div>
                 <div class="item-price">5€</div>
             </div>
+        </div>
+
+        <!-- ELENCO ALLERGENI -->
+        <div class="section">
+            <div class="section-title">⚠️ Elenco Allergeni - Reg. (UE) n. 1169/2011</div>
+            <table class="allergens-table">
+                <thead>
+                    <tr>
+                        <th>ITALIANO</th>
+                        <th>DEUTSCH</th>
+                        <th>ENGLISH</th>
+                        <th>FRANÇAIS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="allergens-header-row">É disponibile il Registro Allergeni (italiano)</td>
+                        <td class="allergens-header-row">Das Allergie Register steht zur verfügung (italienisch)</td>
+                        <td class="allergens-header-row">The Register of Allergens is available (italian)</td>
+                        <td class="allergens-header-row">Le Registre des Allergènes est disponible (italien)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="allergen-number">1.</span> Cereali contenenti glutine, vale a dire: grano (farro e grano khorasan), segale, orzo, avena o i loro ceppi ibridati e prodotti derivati</td>
+                        <td><span class="allergen-number">1.</span> Glutenhaltiges Getreide, namentlich Weizen (wie Dinkel und Khorasan Weizen), Roggen, Gerste, Hafer oder Hybridstämme davon, sowie daraus hergestellte Erzeugnisse, ausgenommen</td>
+                        <td><span class="allergen-number">1.</span> Cereals containing gluten, namely: wheat (such as spelt and khorasan wheat), rye, barley, oats or their hybridised strains, and products thereof</td>
+                        <td><span class="allergen-number">1.</span> Céréales contenant du gluten à savoir blé (comme épeautre et blé de Khorasan), seigle, orge, avoine ou leurs souches hybridées et produits à base de ces céréales</td>
+                    </tr>
+                    <tr>
+                        <td><span class="allergen-number">2.</span> Crostacei e prodotti a base di crostacei</td>
+                        <td><span class="allergen-number">2.</span> Krebstiere und daraus gewonnene Erzeugnisse</td>
+                        <td><span class="allergen-number">2.</span> Crustaceans and products thereof</td>
+                        <td><span class="allergen-number">2.</span> Crustacés et produits à base de crustacés</td>
+                    </tr>
+                    <tr>
+                        <td><span class="allergen-number">3.</span> Uova e prodotti a base di uova</td>
+                        <td><span class="allergen-number">3.</span> Eier und daraus gewonnene Erzeugnisse</td>
+                        <td><span class="allergen-number">3.</span> Eggs and products thereof</td>
+                        <td><span class="allergen-number">3.</span> Œufs et produits à base d'œufs</td>
+                    </tr>
+                    <tr>
+                        <td><span class="allergen-number">4.</span> Pesce e prodotti a base di pesce</td>
+                        <td><span class="allergen-number">4.</span> Fische und daraus gewonnene Erzeugnisse</td>
+                        <td><span class="allergen-number">4.</span> Fish and products thereof</td>
+                        <td><span class="allergen-number">4.</span> Poissons et produits à base de poissons</td>
+                    </tr>
+                    <tr>
+                        <td><span class="allergen-number">5.</span> Arachidi e prodotti a base di arachidi</td>
+                        <td><span class="allergen-number">5.</span> Erdnüsse und daraus gewonnene Erzeugnisse</td>
+                        <td><span class="allergen-number">5.</span> Peanuts and products thereof</td>
+                        <td><span class="allergen-number">5.</span> Arachides et produits à base d'arachides</td>
+                    </tr>
+                    <tr>
+                        <td><span class="allergen-number">6.</span> Soia e prodotti a base di soia</td>
+                        <td><span class="allergen-number">6.</span> Sojabohnen und daraus gewonnene Erzeugnisse</td>
+                        <td><span class="allergen-number">6.</span> Soybeans and products thereof</td>
+                        <td><span class="allergen-number">6.</span> Soja et produits à base de soja</td>
+                    </tr>
+                    <tr>
+                        <td><span class="allergen-number">7.</span> Latte e prodotti a base di latte (incluso il lattosio)</td>
+                        <td><span class="allergen-number">7.</span> Milch und daraus gewonnene Erzeugnisse (einschließlich Laktose)</td>
+                        <td><span class="allergen-number">7.</span> Milk and products thereof (including lactose)</td>
+                        <td><span class="allergen-number">7.</span> Lait et produits à base de lait (y compris le lactose)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="allergen-number">8.</span> Frutta a guscio: mandorle (Amygdalus communis L.), nocciole (Corylus avellana), noci (Juglans regia), noci di acagiù (Anacardium occidentale), noci di pecan (Carya illinoinensis Wangenh K. Koch), noci del Brasile (Bertholletia excelsa), pistacchi (Pistacia vera), noci macadamia o noci del Queensland (Macadamia ternifolia) e i loro prodotti</td>
+                        <td><span class="allergen-number">8.</span> Schalenfrüchte namentlich Mandeln (Amygdalus communis L.), Haselnüsse (Corylus avellana), Walnüsse (Juglans regia), Kaschunüsse (Anacardium occidentale), Pecannüsse (Carya illinoinensis Wangenh K. Koch), Paranüsse (Bertholletia excelsa), Pistazien (Pistacia vera), Macadamia- oder Queenslandnüsse(Macadamia ternifolia), sowie daraus gewonnene Erzeugnisse</td>
+                        <td><span class="allergen-number">8.</span> Nuts namely: almonds (Amygdalus communis L.), hazelnuts (Corylus avellana), walnuts (Juglans regia), cashews (Anacardium occidentale), pecan nuts (Carya illinoinensis Wangenh K. Koch), Brazil nuts (Bertholletia excelsa), pistachio nuts (Pistacia vera), macadamia or Queensland nuts (Macadamia ternifolia), and products thereof</td>
+                        <td><span class="allergen-number">8.</span> Fruits à coque : amandes (Amygdalus communis L.), noisettes (Corylus avellana), noix (Juglans regia), noix de cajou (Anacardium occidentale), noix de pécan (Carya illinoinensis Wangenh K. Koch), noix du Brésil (Bertholletia excelsa), pistaches (Pistacia vera), noix de Macadamia ou du Queensland (Macadamia ternifolia), et produits à base de ces fruits</td>
+                    </tr>
+                    <tr>
+                        <td><span class="allergen-number">9.</span> Sedano e prodotti a base di sedano</td>
+                        <td><span class="allergen-number">9.</span> Sellerie und daraus gewonnene Erzeugnisse</td>
+                        <td><span class="allergen-number">9.</span> Celery and products thereof</td>
+                        <td><span class="allergen-number">9.</span> Céleri et produits à base de céleri</td>
+                    </tr>
+                    <tr>
+                        <td><span class="allergen-number">10.</span> Senape e prodotti a base di senape</td>
+                        <td><span class="allergen-number">10.</span> Senf und daraus gewonnene Erzeugnisse</td>
+                        <td><span class="allergen-number">10.</span> Mustard and products thereof</td>
+                        <td><span class="allergen-number">10.</span> Moutarde et produits à base de moutarde</td>
+                    </tr>
+                    <tr>
+                        <td><span class="allergen-number">11.</span> Semi di sesamo e prodotti a base di semi di sesamo</td>
+                        <td><span class="allergen-number">11.</span> Sesamsamen und daraus gewonnene Erzeugnisse</td>
+                        <td><span class="allergen-number">11.</span> Sesame seeds and products thereof</td>
+                        <td><span class="allergen-number">11.</span> Graines de sésame et produits à base de graines de sésame</td>
+                    </tr>
+                    <tr>
+                        <td><span class="allergen-number">12.</span> Anidride solforosa e solfiti > 10 mg/kg o 10 mg/l SO2</td>
+                        <td><span class="allergen-number">12.</span> Schwefeldioxid und Sulphite > 10 mg/kg oder 10 mg/l SO2</td>
+                        <td><span class="allergen-number">12.</span> Sulphur dioxide and sulphites > 10 mg/kg or 10 mg/l SO2</td>
+                        <td><span class="allergen-number">12.</span> Anhydride sulfureux et sulfites > 10 mg/kg ou 10 mg/l SO2</td>
+                    </tr>
+                    <tr>
+                        <td><span class="allergen-number">13.</span> Lupini e prodotti a base di lupini</td>
+                        <td><span class="allergen-number">13.</span> Lupinen und daraus gewonnene Erzeugnisse</td>
+                        <td><span class="allergen-number">13.</span> Lupin and products thereof</td>
+                        <td><span class="allergen-number">13.</span> Lupin et produits à base de lupin</td>
+                    </tr>
+                    <tr>
+                        <td><span class="allergen-number">14.</span> Molluschi e prodotti a base di molluschi</td>
+                        <td><span class="allergen-number">14.</span> Weichtiere und daraus gewonnene Erzeugnisse</td>
+                        <td><span class="allergen-number">14.</span> Molluscs and products thereof</td>
+                        <td><span class="allergen-number">14.</span> Mollusques et produits à base de mollusques</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="allergens-footer">ELENCO ALLERGENI – STUDIO BRANDOLESE LIA – TRENTO (335.6948632) – REG. (UE) 78/2014 – FILE: 22.05.2015</div>
         </div>
 
         <!-- NOTA IMPORTANTE -->
